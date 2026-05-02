@@ -33,8 +33,8 @@ def audio_transcript(text):
 
 #qiuz
 
-def quize_generator(images,difficulty):
-    prompt=f"Create 3 quizes and based on the {difficulty}.make sure markdown to differntiate diffarent section"
+def quiz_generator(images,difficulty):
+    prompt=f"Create 3 quiz and last solve the answer {difficulty}.make sure markdown to differntiate diffarent section"
     response=client.models.generate_content(
         model="gemini-3-flash-preview",
         contents=[images,prompt]
