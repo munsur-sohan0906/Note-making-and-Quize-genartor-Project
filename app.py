@@ -1,11 +1,11 @@
 import streamlit as st
-from api_calling import note_generator,audio_transcript,quize_generator
+from api_calling import note_generator,audio_transcript,quiz_generator
 from PIL import Image
 
 
 #title
-st.title("Note Summary And Quize Generator")
-st.markdown("Upload 3 image to genarate note summary and genearte Quize")
+st.title("Note Summary And Quiz Generator")
+st.markdown("Upload 3 image to genarate note summary and genearte Quiz")
 st.divider()
 
 #sidebar
@@ -69,8 +69,8 @@ if button:
                 note=note.replace("`","")
                 note=note.replace("-","")
                 st.audio(audio_transcript(note))
-        #quize
+        #quiz
         with st.container(border=True): 
             st.subheader(f"Quize ({option}) Diffculty")
             with st.spinner("AI is writing note"):
-                 st.markdown(quize_generator(pil_images,option))
+                 st.markdown(quiz_generator(pil_images,option))
