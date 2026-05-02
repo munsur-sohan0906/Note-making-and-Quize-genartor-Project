@@ -5,7 +5,7 @@ from PIL import Image
 
 #title
 st.title("Note Summary And Quiz Generator")
-st.markdown("Upload 3 image to genarate note summary and genearte Quiz")
+st.markdown("Upload maximm 3 image to genarate note summary and genearte Quiz")
 st.divider()
 
 #sidebar
